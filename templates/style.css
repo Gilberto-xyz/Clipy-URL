@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
+    background: #8e9eab;
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+}
+
+.container {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+img {
+    width: 20%;
+    height: auto;
+    display: block;
+}
