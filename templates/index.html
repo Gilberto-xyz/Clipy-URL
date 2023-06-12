@@ -28,7 +28,6 @@ img {
     display: block;
 }
 </style>
-
 <body class="container">
     <h1>Bienvenido a Clipy</h1>
     <p>Esta web te permite acortar enlaces largos y transformarlos en una version simplificada bajo el dominio de la
@@ -37,10 +36,13 @@ img {
     <form action="{{url_for('index')}}" method="POST">
 
         <input type="url" name="url_original" placeholder="Introduce tu URL" required>
-        <button type="submit" class="btn btn-primary">Acortar</button>
+        <button type="submit" class="btn btn-outline-success">Acortar</button>
 
-        <p>La URL recortada es: {{ url_recortada }}</p>
+        <p>La URL recortada es: <a href="{{ url_recortada }}" target="_blank">{{ url_recortada }}</a></p> 
         <p>URL Completa: {{url_original}}</p>
+
+
+        <a href="{{ url_for('mostrar_urls') }}" class="btn btn-primary">Mostrar todas las URL recortadas</a>
 
         <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Windows_11_Clippy_paperclip_emoji.png" alt="Clippy">
     </form>
