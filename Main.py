@@ -7,6 +7,13 @@ from sqlalchemy.orm import sessionmaker
 
 from flask import Flask, render_template, request, redirect
 
+# Crea una instancia del motor de la base de datos
+engine = create_engine('mysql+mysqlconnector://root@localhost:3306/db_url', echo=True)
+
+# Crea una sesión de SQLAlchemy para permitir la comunicación con la base de datos
+Session = sessionmaker(bind=engine)
+session = Session()
+
 # Define la base de datos
 Base = sqlalchemy.orm.declarative_base()
 
@@ -17,15 +24,10 @@ class Url(Base):
     url_original = Column(String(255), nullable=False)
     url_recortada = Column(String(255), nullable=False)
 
-# Crea una instancia del motor de la base de datos
-engine = create_engine('mysql+mysqlconnector://root@localhost:3306/db_url')
 
 # Crea todas las tablas definidas en la base de datos
 Base.metadata.create_all(engine)
 
-# Crea una sesión de SQLAlchemy
-Session = sessionmaker(bind=engine)
-session = Session()
 
 app = Flask(__name__)
 
