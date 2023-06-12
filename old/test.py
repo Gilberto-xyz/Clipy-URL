@@ -1,4 +1,4 @@
-from Main import generar_url
+from old.Main import generar_url
 import unittest
 
 class TestGenerarUrl(unittest.TestCase):
