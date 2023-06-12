@@ -22,7 +22,7 @@ Contribución
 Si desea contribuir a este proyecto, siga estos pasos:
 
 Fork este repositorio
-Cree una rama para su nueva función (git checkout -b feature/nueva-funcion)
-Realice los cambios necesarios y confirme (git commit -am 'Agregue una nueva función')
-Empuje los cambios a su rama (git push origin feature/nueva-funcion)
-Cree una solicitud de extracción en GitHub
+- Cree una rama para su nueva función (git checkout -b feature/nueva-funcion)
+- Realice los cambios necesarios y confirme (git commit -am 'Agregue una nueva función')
+- Empuje los cambios a su rama (git push origin feature/nueva-funcion)
+- Cree una solicitud de extracción en GitHub
